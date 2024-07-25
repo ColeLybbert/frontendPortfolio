@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,26 +6,62 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <header>
+        <p id='myName'> Cole Lybbert</p>
+        <nav>
+          <ul className='navLinks'>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>Projects</a></li>
+            <li><a href='#'>About</a></li>
+          </ul>
+        </nav>
+        <a className='cta' href='#'><button>Contact</button></a>
+      </header>
+
+      <div id='body'>
+        <div id='bodyCard1' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
+
+        <div id='bodyCard2' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
+
+        <div id='bodyCard3' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
+
+        <div id='bodyCard4' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
+
+        <div id='bodyCard5' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
+
+        <div id='bodyCard6' className='bodyCards'>
+          <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&w=600'></img>
+          <p>The Polite Cat</p>
+          <p>My face when someone expects me to be excited about something that I'm not excited about.</p>
+          <a><button>Button</button></a>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </>
   )
 }
