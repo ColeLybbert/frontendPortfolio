@@ -4,31 +4,3 @@ body {
   background-color: #141414;
   font-family: 'Lato', sans-serif;
 }
-
-.introCard {
-  margin: 15rem 0rem 0rem 5rem;
-}
-p {
-  color: white;
-}
-
-.name {
-  font-size: 8em;
-}
-.title {
-  font-size: 4rem;
-}
-
-button{
-  background-color: #141414;
-  color: white;
-  border: solid 1px white;
-  border-radius: 1rem;
-  width: 6rem;
-  height: 2rem;
-  margin: 5rem 45%;
-}
-
-button:hover{
-  cursor: pointer;
-}
