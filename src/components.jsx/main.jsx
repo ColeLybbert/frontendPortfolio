@@ -17,6 +17,7 @@ const loadingContainerVariants = {
 const childerenVariant = {
     load: {
         y: [30, 0],
+        opacity: 1,
         transition: {
             y: {
                 duration: 0.6,
@@ -40,7 +41,7 @@ const Main = () => {
             function () {
                 cycleAnimation()
             },
-            3000
+            6000
         );
         setUseAnimation(false);
     } else {
