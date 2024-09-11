@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { animate, delay, motion, useCycle } from 'framer-motion';
 
 const h1Variants = {
@@ -72,12 +72,21 @@ const buttonVariants = {
 
 
 const NavBar = () => {
-    setTimeout(
-        function () {
-            cycleAnimation()
-        },
-        3000
-    );
+
+    
+    const [useanimation, setUseAnimation] = useState(true);
+
+    if(useanimation) {
+        setTimeout(
+            function () {
+                cycleAnimation()
+            },
+            3000
+        );
+        setUseAnimation(false);
+    } else {
+        console.log('animation done')
+    }
     const [animation, cycleAnimation] = useCycle("animationOne", "animationTwo" )
 
     return (

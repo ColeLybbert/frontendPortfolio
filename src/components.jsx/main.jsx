@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 import { delay, easeOut, motion, stagger, useCycle } from 'framer-motion'
 
 const loadingContainerVariants = {
@@ -32,12 +33,19 @@ const Main = () => {
 
     const [animation, cycleAnimation] = useCycle("hidden", "load");
 
-    setTimeout(
-        function () {
-            cycleAnimation()
-        },
-        5000
-    );
+    const [useanimation, setUseAnimation] = useState(true);
+
+    if(useanimation) {
+        setTimeout(
+            function () {
+                cycleAnimation()
+            },
+            3000
+        );
+        setUseAnimation(false);
+    } else {
+        console.log('animation done')
+    }
 
     return (
         <>
