@@ -2,5 +2,64 @@
 
 body {
   background-color: #141414;
+  color: white;
   font-family: 'Lato', sans-serif;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.navBarWrap {
+  margin: 0 auto;
+  padding: 0 0 0.1rem 0;
+  position: relative;
+  background: linear-gradient(to right, #141414, #eee, #141414);
+}
+
+.navBar {
+  background: #141414;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  margin: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  
+}
+
+.contactMe {
+  color: white;
+  margin: 1.5rem 1rem;
+  background-color: #141414;
+  border: solid 1px white;
+  width: 5rem;
+  height: 3rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15rem;
+}
+
+.projectCards {
+  text-align: center;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 1.5rem;
 }
