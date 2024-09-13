@@ -14,7 +14,7 @@ const loadingContainerVariants = {
         color: 'transparent',
     },
     load: {
-        marginTop: '15rem',
+        marginTop: '10rem',
         opacity: 1,
         color: 'transparent',
         transition: {
@@ -28,9 +28,9 @@ const childerenVariant = {
         y: ['1rem', '0rem'],
         opacity: 1,
         backgroundColor: 'white',
-        width: '5rem',
-        height: '5rem',
-        margin: '0 1rem',
+        width: '3rem',
+        height: '3rem',
+        margin: '0 0.1rem',
         borderRadius: '2.5rem',
         transition: {
             rotate: {
@@ -118,6 +118,19 @@ const Main = () => {
                 cycleAnimation()
                 setUseAnimation(false)
             },
+            11000
+        );
+    } else {
+        console.log('animation done')
+    }
+    if (useanimation) {
+        setTimeout(
+            function () {
+                console.log('animation started')
+
+                cycleAnimation()
+                setUseAnimation(false)
+            },
             12000
         );
     } else {
@@ -127,24 +140,10 @@ const Main = () => {
         setTimeout(
             function () {
                 console.log('animation started')
-
                 cycleAnimation()
                 setUseAnimation(false)
             },
             13000
-        );
-    } else {
-        console.log('animation done')
-    }
-    if (useanimation) {
-        setTimeout(
-            function () {
-                console.log('animation started')
-
-                cycleAnimation()
-                setUseAnimation(false)
-            },
-            14000
         );
     } else {
         console.log('animation done')
