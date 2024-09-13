@@ -85,7 +85,7 @@ const NavBar = () => {
         );
         setUseAnimation(false);
     } else {
-        console.log('animation done')
+        console.log('navbar animation done')
     }
     const [animation, cycleAnimation] = useCycle("animationOne", "animationTwo" )
 

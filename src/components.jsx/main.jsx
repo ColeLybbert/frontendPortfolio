@@ -1,153 +1,109 @@
 import React from 'react'
 import { useState } from 'react'
-import { delay, easeOut, motion, stagger, useCycle } from 'framer-motion'
+import { delay, easeOut, m, motion, stagger, useAnimation, useCycle } from 'framer-motion'
 
 const loadingContainerVariants = {
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 1,
-        }
-    },
-    move: {
-        opacity: 1,
-        color: 'transparent',
-    },
     load: {
         marginTop: '10rem',
-        opacity: 1,
-        color: 'transparent',
         transition: {
             staggerChildren: 0.1,
         }
-    }
+    },
+    setXY: {
+        marginTop: '10rem',
+        transition: {
+            staggerChildren: 0.1,
+        }
+    },
+    setOpacity: {
+        transition: {
+            staggerChildren: 0.5,
+        }
+    },
 }
 
 const childerenVariant = {
     load: {
         y: ['1rem', '0rem'],
         opacity: 1,
-        backgroundColor: 'white',
+        backgroundColor: '#FFFFFF',
+        color: 'transparent',
         width: '3rem',
         height: '3rem',
         margin: '0 0.1rem',
         borderRadius: '2.5rem',
         transition: {
-            rotate: {
-                repeat: Infinity,
-                repeatType: 'reverse',
-            },
             y: {
                 repeat: Infinity,
                 repeatType: 'reverse',
                 ease: 'easeOut'
+
             },
             opacity: {
                 delay: 7
-            }
+            },
         }
     },
-    move: {
-        x: 0,
+    setXY: {
         y: 0,
-        opacity: 1,
-        width: '5rem',
-        height: '5rem',
+        x: 0,
+        opacity: 0,
+        backgroundColor: '#FFFFFF',
+        color: 'transparent',
+        width: '3rem',
+        height: '3rem',
+        margin: '0 0.1rem',
         borderRadius: '2.5rem',
-        backgroundColor: 'white',
-        color: 'transparant',
         transition: {
             duration: 1,
-        }
-    },
-    show1: {
-        opacity: 1,
-        width: '5rem',
-        height: '5rem',
-        backgroundColor: 'white',
-        color: 'transparant',
-        transition: {
-            duration: 1,
-        }
-    },
-    show2: {
-        opacity: 1,
-        backgroundColor: ['#FFFFFF', '#141414'],
-        width: '5rem',
-        height: '5rem',
-        transition: {
-            backgroundColor: {
-                duration: 1,
+            opacity: {
+                delay: 1
             }
         }
     },
-    show3: {
-        opacity: 1,
-        color: '#FFFFFF',
-        transition: {
-            duration: 1,
-        }
+    setCards: {
+        opacity: 0,
+    },
+    setOpacity: {
+        opacity: 1
     }
 }
 
 
+
 const Main = () => {
 
-    const [animation, cycleAnimation] = useCycle('load', 'move', 'show1', 'show2', 'show3');
-
+    const [animation, cycleAnimation] = useCycle('load', 'setXY', 'setCards','setOpacity');
     const [useanimation, setUseAnimation] = useState(true);
 
-    if (useanimation) {
-        setTimeout(
-            function () {
-                console.log('animation started')
 
-                cycleAnimation()
-                setUseAnimation(false)
-            },
-            10000
-        );
-    } else {
-        console.log('animation done')
-    }
-    if (useanimation) {
-        setTimeout(
-            function () {
-                console.log('animation started')
+    setTimeout(() => {
+        if (useanimation) {
+            cycleAnimation()
+            setUseAnimation(false)
+        } else {
+            console.log('animation finished')
+        }
+    }, 9000)
 
-                cycleAnimation()
-                setUseAnimation(false)
-            },
-            11000
-        );
-    } else {
-        console.log('animation done')
-    }
-    if (useanimation) {
-        setTimeout(
-            function () {
-                console.log('animation started')
+    setTimeout(() => {
+        if (useanimation) {
+            cycleAnimation()
+            setUseAnimation(false)
+        } else {
+            console.log('animation finished')
+        }
+    }, 11000)
 
-                cycleAnimation()
-                setUseAnimation(false)
-            },
-            12000
-        );
-    } else {
-        console.log('animation done')
-    }
-    if (useanimation) {
-        setTimeout(
-            function () {
-                console.log('animation started')
-                cycleAnimation()
-                setUseAnimation(false)
-            },
-            13000
-        );
-    } else {
-        console.log('animation done')
-    }
+    setTimeout(() => {
+        if (useanimation) {
+            cycleAnimation()
+            setUseAnimation(false)
+        } else {
+            console.log('animation finished')
+        }
+    }, 12000)
+
 
     return (
         <>

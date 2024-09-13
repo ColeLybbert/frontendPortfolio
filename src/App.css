@@ -54,6 +54,7 @@ h2 {
 
 .projectsTag{
   font-size: 3rem;
+  margin: 1.5rem 0;
 }
 
 .loadingContainer {
@@ -67,8 +68,13 @@ h2 {
   text-align: center;
   background-color: #141414;
   border: 1px solid white;
-  width: 35rem;
+  width: 15rem;
   height: 20rem;
   margin: 1rem 1rem;
   opacity: 0;
+}
+
+.projectPhotos {
+  height: 20rem;
+  width: 20rem;
 }
